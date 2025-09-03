@@ -1,0 +1,26 @@
+// Smooth scroll to section
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Animate skill & project cards on scroll
+window.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".skill-card, .project-card, .edu-card, #achievements li");
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    if (position < window.innerHeight - 100) {
+      el.style.opacity = "1";
+      el.style.transform = "scale(1)";
+    }
+  });
+});
+
+// Sparkle effect
+document.addEventListener("mousemove", (e) => {
+  let sparkle = document.createElement("span");
+  sparkle.className = "sparkle";
+  sparkle.style.left = e.pageX + "px";
+  sparkle.style.top = e.pageY + "px";
+  document.body.appendChild(sparkle);
+  setTimeout(() => sparkle.remove(), 1000);
+});
