@@ -1,0 +1,250 @@
+/* General Theme */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #3e2c1c, #a97142);
+  color: #fff8f0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  color: #ffd700;
+  animation: glow 3s infinite alternate;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(20, 10, 5, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffdca2;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+/* Hero */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.typing {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  border-right: 3px solid #ffd700;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(20) forwards, blink 0.8s infinite;
+}
+
+#hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ffd700;
+  color: #3e2c1c;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#hero button:hover {
+  transform: scale(1.1);
+  background: #ffb347;
+}
+
+/* Sections */
+section {
+  padding: 60px 40px;
+  text-align: center;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* Highlight */
+.highlight {
+  color: #ffd700;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-card {
+  background: rgba(255, 215, 0, 0.15);
+  border: 2px solid #ffd700;
+  padding: 15px 25px;
+  border-radius: 12px;
+  transition: transform 0.5s, background 0.5s;
+  animation: float 3s infinite ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: rgba(255, 215, 0, 0.3);
+}
+
+/* Education */
+.edu-card {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 15px auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+  border-left: 5px solid #ffd700;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+/* Projects */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+  animation: fadeIn 2s ease-in-out;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffd700;
+}
+
+/* Achievements */
+#achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+#achievements li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+}
+
+form button {
+  background: #ffd700;
+  color: #3e2c1c;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #ffb347;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(20, 10, 5, 0.9);
+}
+
+/* Sparkle Effect */
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffd700;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkleAnim 1s linear forwards;
+  box-shadow: 0 0 10px #ffd700, 0 0 20px #ffb347;
+}
+
+/* Animations */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffb347; }
+  to { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffb347; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes sparkleAnim {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(2); opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
